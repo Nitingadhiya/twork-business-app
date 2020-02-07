@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {WebView} from 'react-native-webview';
 import {View, Text, BackHandler} from 'react-native';
 // import firebase from 'react-native-firebase';
-//import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 
 let self;
 const INJECTEDJAVASCRIPT = `const meta = document.createElement('meta'); meta.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'); meta.setAttribute('name', 'viewport'); document.getElementsByTagName('head')[0].appendChild(meta); `;

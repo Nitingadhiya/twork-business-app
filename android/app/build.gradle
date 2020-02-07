@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.twork"
+        applicationId "com.twork.business"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
