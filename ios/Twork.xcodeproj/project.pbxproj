@@ -20,6 +20,7 @@
 		577FD2749611326E8B015061 /* libPods-Twork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA46533E51DBE40D89A4A17 /* libPods-Twork.a */; };
 		610B4AAAA9E948C74F66BD5F /* libPods-TworkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD3E284D0ADEE9C62F042F7 /* libPods-TworkTests.a */; };
 		E5C0E354B0841D3A1792BB6E /* libPods-Twork-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7836611BFE2EA2ACEF64759 /* libPods-Twork-tvOS.a */; };
+		E6CB9EBA23ED78E6008C5A22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6CB9EB923ED78E6008C5A22 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		ACD3E284D0ADEE9C62F042F7 /* libPods-TworkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TworkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5E3CAC999104BDB350011C /* Pods-Twork-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twork-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Twork-tvOS/Pods-Twork-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C3495D85E967AF821B483CA7 /* Pods-Twork-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twork-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Twork-tvOSTests/Pods-Twork-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6CB9EB923ED78E6008C5A22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Twork/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E6CB9EBB23ED841A008C5A22 /* Twork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Twork.entitlements; path = Twork/Twork.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EE0EA4C118BBF9CB2CEE450F /* Pods-Twork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twork.release.xcconfig"; path = "Target Support Files/Pods-Twork/Pods-Twork.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 		13B07FAE1A68108700A75B9A /* Twork */ = {
 			isa = PBXGroup;
 			children = (
+				E6CB9EBB23ED841A008C5A22 /* Twork.entitlements */,
+				E6CB9EB923ED78E6008C5A22 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,7 +166,6 @@
 				224489BA6DDF3B0C7F2665DF /* Pods-TworkTests.debug.xcconfig */,
 				5B6A6BEE69A586B57993705C /* Pods-TworkTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +296,17 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 78XQ7DT2RX;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +323,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +354,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				E6CB9EBA23ED78E6008C5A22 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,8 +643,10 @@
 			baseConfigurationReference = 5DD9C6A6ED6D064B1538367F /* Pods-Twork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Twork/Twork.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 78XQ7DT2RX;
 				INFOPLIST_FILE = Twork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -635,7 +654,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.twork.business;
 				PRODUCT_NAME = Twork;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -646,7 +665,9 @@
 			baseConfigurationReference = EE0EA4C118BBF9CB2CEE450F /* Pods-Twork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Twork/Twork.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78XQ7DT2RX;
 				INFOPLIST_FILE = Twork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -654,7 +675,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.twork.business;
 				PRODUCT_NAME = Twork;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

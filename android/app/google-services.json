@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "411973729404",
+    "firebase_url": "https://twork-business.firebaseio.com",
+    "project_id": "twork-business",
+    "storage_bucket": "twork-business.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411973729404:android:0207c439046298dff29df9",
+        "android_client_info": {
+          "package_name": "com.twork.business"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411973729404-bei377b38rmda3ttoh5l4v1a1e0rkk90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEJW777qfYNArgaQQRmf0rrkNfBTGvfQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411973729404-bei377b38rmda3ttoh5l4v1a1e0rkk90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
