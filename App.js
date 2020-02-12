@@ -121,13 +121,17 @@ export default class App extends Component {
         <WebView
           ref={myWeb => (this.refWeb = myWeb)}
           useWebKit={true}
-          source={{uri: this.state.webURL || 'https://app.twork.io/login'}}
+          source={{uri: this.state.webURL || 'https://app.twork.io'}}
           style={{height: '100%', width: '100%'}}
           onLoadEnd={() => this.loadEnd()}
           originWhitelist={['*']}
           injectedJavaScript={INJECTEDJAVASCRIPT}
+          onLoadProgress={({nativeEvent}) => {
+            this.loadingProgress = nativeEvent.progress;
+            console.log(this.loadingProgress, 'progress');
+          }}
           onNavigationStateChange={navState => {
-            if (navState.url === 'https://app.twork.io/login') {
+            if (navState.url === 'https://app.twork.io') {
               this.setState({
                 loading: true,
               });
